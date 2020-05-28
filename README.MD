@@ -6,7 +6,7 @@ It has no dependencies and is not based on WebSQL.
 Data is stored as serialized JSON in localStorage.
 
 # Usage / Examples
-Here's the [demo](https://servibilis.github.io/button-up-down/index.html).
+Here's the [demo](https://servibilis.github.io/localStorage_RelDb/index.html).
 ```javascript
 
 let f_datetime = val => Date.now();
