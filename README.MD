@@ -97,7 +97,7 @@ c = users.delete(where_usrs);
 * 			lastIUDEvent
 *
 * @param name : name of table
-* @columns : array of dictionary with structure || just name of column
+* @param columns : array of dictionary with structure || just name of column
 * 		name : required
 * 		pk : default = false
 * 		required : default = false
@@ -124,7 +124,7 @@ resetIndex()
 /**
 * insert new row, if primary key not set or `auto` then pk will be set autoincrement
 * @param row - new row
-* @ auto_commit - true || false
+* @param auto_commit - true || false
 */
 insert(row,auto_commit=true)
 
@@ -161,8 +161,8 @@ select(offset,row_count,where,orderby,ordertype,autosel_ptb=true,autosel_ctb=fal
 /**
 * Update rows in table, primary key cant update
 * @param where - see testWhere || false
-* @row - dictionary with new values for columns
-* @auto_commit - true || false
+* @param row - dictionary with new values for columns
+* @param auto_commit - true || false
 * @return count updated rows
 */
 update(where,row,auto_commit=true)
@@ -170,7 +170,7 @@ update(where,row,auto_commit=true)
 /**
 * delete rows from table
 * @param where - see testWhere || false
-* @auto_commit - true || false
+* @param auto_commit - true || false
 * @return count deleted rows
 */
 delete(where=false,auto_commit=true)
