@@ -22,6 +22,8 @@ class table {
 	 * recursive serialization
 	 */
 	static objToString(obj){
+		return JSON.stringify(obj);
+		/*
 		let tp = typeof obj;
 		if(tp=="undefined"){
 			return;
@@ -58,12 +60,18 @@ class table {
 				}
 			}
 		throw "symbol or ... not support";
+		*/
 		}
 	/**
 	 * deserialization
 	 */
 	static stringToObj(str){
 		return eval("("+str+")");
+		try {
+			return JSON.parse(str);
+		} catch (error) {
+			return false
+			}
 		}
 	/**
 	 * return value from row by column name
